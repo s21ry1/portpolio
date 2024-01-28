@@ -1,82 +1,74 @@
-/* General styles */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-  }
-  
-  h1, h2 {
-    margin: 0;
-  }
-  
-  p {
-    margin-bottom: 1rem;
-  }
-  
-  /* Header styles */
-  header {
-    background-color: #4CAF50;
-    padding: 1rem;
-    text-align: center;
-  }
-  
-  header h1 {
-    color: #fff;
-    font-size: 2rem;
-  }
-  
-  /* Main section styles */
-  main {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 2rem;
-  }
-  
-  .projects,
-  .about {
-    flex-basis: calc(50% - 2rem);
-    margin-right: 2rem;
-  }
-  
-  .about {
-    margin-right: 0;
-  }
-  
-  section h2 {
-    border-bottom: 2px solid #4CAF50;
-    padding-bottom: 0.5rem;
-    display: inline-block;
-  }
-  
-  /* Projects section styles */
-  .projects article {
-    transition: transform 0.3s ease-out;
-  }
-  
-  .projects article:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* About section styles */
-  .about p {
-    opacity: 1;
-    transition: opacity 0.3s ease-out;
-  }
-  
-  .about:hover p {
-    opacity: 0;
-  }
-  
-  /* Footer styles */
-  footer {
-    background-color: #4CAF50;
-    padding: 1rem;
-    text-align: center;
-    margin-top: 2rem;
-  }
-  
-  footer p {
-    color: #fff;
-    margin: 0;
-  }
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('back.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh; /* Set the height of the body to 100% of the viewport height */
+  color: #fff;
+}
+
+header {
+  text-align: center;
+  padding: 40px 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Dark transparent background for header */
+  color: #fff;
+}
+
+nav {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark transparent background for navigation */
+  padding: 10px 0;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #6aff6a;
+}
+
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.bubble-effect {
+  background-color: rgba(0, 0, 0, 0.9); /* Dark transparent background for sections */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  transition: transform 0.5s;
+}
+
+.bubble-effect:hover {
+  transform: scale(1.05);
+}
+
+.bubble-effect h2 {
+  margin-bottom: 20px;
+}
+
+.bubble-effect ul, .bubble-effect ol {
+  margin: 0;
+  padding: 0;
+  list-style-position: inside;
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark transparent background for footer */
+  color: #fff;
+}
+
+footer p {
+  margin: 0;
+}

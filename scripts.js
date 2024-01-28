@@ -1,11 +1,28 @@
-const about = document.querySelector('.about');
-const aboutText = about.querySelector('p');
+document.addEventListener('DOMContentLoaded', function() {
+  const sections = document.querySelectorAll('.section');
+  const navLinks = document.querySelectorAll('.nav-link');
 
-about.addEventListener('mouseenter', function() {
-  aboutText.style.opacity = 0;
-  aboutText.style.transition = 'opacity 0.3s ease-out';
-});
+  sections.forEach(section => {
+    section.addEventListener('click', () => {
+      section.classList.add('bubble-click');
+      setTimeout(() => {
+        section.classList.remove('bubble-click');
+      }, 500);
+    });
+  });
 
-about.addEventListener('mouseleave', function() {
-  aboutText.style.opacity = 1;
+  navLinks.forEach(link => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+
+      const targetId = link.getAttribute('href').substring(1);
+      const targetSection = document.getElementById(targetId);
+
+      if (targetSection) {
+        targetSection.scrollIntoView({
+          behavior: 'smooth',
+        });
+      }
+    });
+  });
 });
